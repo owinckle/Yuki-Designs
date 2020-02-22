@@ -1,0 +1,1 @@
+web: gunicorn YukiDesigns.wsgi --log-file -
