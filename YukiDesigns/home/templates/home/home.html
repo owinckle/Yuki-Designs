@@ -1,3 +1,8 @@
+{% extends 'home/base.html' %}
+
+{% load static %}
+
+{% block content %}
 <!-- Hero -->
 <div class="hero">
 	<div class="row">
@@ -17,7 +22,11 @@
 		<div class="row">
 			<div class="col-md-6 why-image">
 				<div class="gif">
-					<img src="https://cdn.jsdelivr.net/gh/owinckle/TheWebKit/twk_home/static/twk_home/img/why.gif">
+					<!-- Static -->
+					<img src="{% static 'home/img/why.gif' %}">
+
+					<!-- CDN -->
+					<!-- <img src="https://cdn.jsdelivr.net/gh/owinckle/TheWebKit/twk_home/static/twk_home/img/why.gif"> -->
 				</div>
 			</div>
 			<div class="col-md-6 why-description">
@@ -91,3 +100,4 @@
 	</div>
 </div>
 <!-- End Quote -->
+{% endblock content %}

@@ -26,7 +26,9 @@ SECRET_KEY = '0-=9jum=!_8@acnm2oab1o13@w(y_+j528=!4ck5kib*6l+67x'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-'yuki-designs.herokuapp.com']
+'yuki-designs.herokuapp.com',
+'127.0.0.1'
+]
 
 
 # Application definition
@@ -38,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'HomeConfig',
+    'home.apps.HomeConfig',
 ]
 
 MIDDLEWARE = [
@@ -119,4 +121,5 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
