@@ -26,7 +26,7 @@ SECRET_KEY = '0-=9jum=!_8@acnm2oab1o13@w(y_+j528=!4ck5kib*6l+67x'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-'thewebkit.herokuapp.com']
+'yuki-designs.herokuapp.com']
 
 
 # Application definition
