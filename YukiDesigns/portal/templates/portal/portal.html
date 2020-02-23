@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Yuki Desgins</title>
+
+	<!-- Links -->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	
+	<!-- Load Static -->
+	{% load static %}
+
+	<!-- Static CSS -->
+	<link rel="stylesheet" type="text/css" href="{% static 'portal/css/main.css' %}">
+
+	<!-- CDN CSS -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/owinckle/Yuki-Designs/YukiDesigns/portal/static/portal/css/main.css">
+
+	<!-- Scripts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="panel">
+		<div class="header">
+			<p>Log In</p>
+		</div>
+		<form>
+			<input type="text" name="user" placeholder="Email or username">
+			<input type="password" name="password" placeholder="Password">
+			<button type="submit" class="login">Login</button>
+			<a href="javascript:void(0)">
+				<p class="forgot-password">Forgot password?</p>
+			</a>
+		</form>
+	</div>
+</body>
+</html>

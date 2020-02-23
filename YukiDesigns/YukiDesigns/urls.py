@@ -17,8 +17,10 @@ from django.contrib import admin
 from django.urls import path
 
 from home import views as home_views
+from portal import views as portal_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_views.main, name='home'),
+    path('login', portal_views.main, name='portal'),
 ]
