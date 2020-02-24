@@ -23,8 +23,10 @@
 		<div class="header">
 			<p>Log In</p>
 		</div>
-		<form>
-			<input type="text" name="user" placeholder="Email or username">
+		<form method="POST">
+			{% csrf_token %}
+			<!-- {{form}} -->
+			<input type="text" name="username" placeholder="Email or username">
 			<input type="password" name="password" placeholder="Password">
 			<button type="submit" class="login">Login</button>
 			<a href="javascript:void(0)">
