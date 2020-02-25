@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Yuki Desgins | Dashboard</title>
+
+	<!-- Links -->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+	<!-- Load Static -->
+	{% load static %}
+
+	<!-- Static CSS -->
+	<link rel="stylesheet" type="text/css" href="{% static 'dashboard/css/main.css' %}">
+
+	<!-- CDN CSS -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/owinckle/Yuki-Designs/YukiDesigns/dashboard/static/home/css/main.css">
+
+</head>
+<body>
+	<div class="wrapper">
+		<!-- Side Bar -->
+		{% include 'dashboard/sidebar.html' %}
+
+		<!-- Main Panel -->
+		<div class="main-panel">
+			<!-- Navbar -->
+			<nav class="header">
+				<div class="container-fluid">
+					<div class="header-wrapper">
+						<p class="navbar-title">{{ page }}</p>
+					</div>
+				</div>
+			</nav>
+			<!-- End Navbar -->
+			<div class="content">
+				<div class="container-fluid">
+					{% block content %}
+					{% endblock content %}
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

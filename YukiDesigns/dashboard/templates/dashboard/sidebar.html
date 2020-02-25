@@ -1,0 +1,37 @@
+<div class="sidebar">
+	<div class="logo">
+		<a href="javascript:void(0)" class="simple-text logo-normal">
+			Yuki Designs
+		</a>
+	</div>
+	<div class="sidebar-wrapper">
+		<ul class="nav">
+		{% if dashboardActive %}
+			<li class="active">
+		{% else %}
+			<li>
+		{% endif %}
+				<a class="nav-link" href="{% url 'dashboard' %}">
+					<i class="material-icons">dashboard</i>
+					<p>Dashboard</p>
+				</a>
+			</li>
+		{% if profileActive %}
+			<li class="active">
+		{% else %}
+			<li>
+		{% endif %}
+				<a class="nav-link" href="{% url 'profile' %}">
+					<i class="material-icons">person</i>
+					<p>Profile</p>
+				</a>
+			</li>
+			<li>
+				<a class="nav-link" href="javascript:void(0)">
+					<i class="material-icons">view_list</i>
+					<p>Websites</p>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>

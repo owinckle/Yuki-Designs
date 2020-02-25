@@ -18,12 +18,15 @@ from django.urls import path
 
 from home import views as home_views
 from portal import views as portal_views
+from dashboard import views as dashboard_views
 
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_views.main, name='home'),
+    path('dashboard', dashboard_views.dashboard, name='dashboard'),
+    path('dashboard/profile', dashboard_views.profile, name='profile'),
     path('login', auth_views.LoginView.as_view(template_name='portal/portal.html'), name='portal'),
     path('logout', auth_views.LogoutView.as_view(template_name='home/home.html'), name='logout'),
 ]
